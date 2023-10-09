@@ -1,0 +1,3 @@
+./file1.txt
+./rootDir/file2.txt
+./rootDir/file3.txt

@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html> 
+<head>
+    <meta charset="UTF-8">
+    <title>createHTMLDocument() method</title>
+</head>  
+ 
+<body style="text-align:center;">
+    <h1 style="color:green;"> 
+     GeeksforGeeks
+    </h1>
+    <p id="a">
+    HTML | DOM createHTMLDocument() method
+    </p>
+ 
+    <button onclick = "Geeks()">
+    Click Here
+    </button>
+    <script>
+        function Geeks(){
+            var doc =
+document.implementation.createHTMLDocument("New Document");
+            var p = doc.createElement("p");
+            p.innerHTML = "GeeksforGeeks";
+            doc.body.appendChild(p);
+            console.log(doc);
+        }
+  </script>
+</body>  
+</html>

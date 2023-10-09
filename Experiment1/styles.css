@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+ol {
+    text-align: center;
+    list-style-position: inside;
+}
+
+.img-grid {
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 100px;
+    row-gap: 20px;
+}
+
+.img-tile > span {
+    font-size: 2rem;
+    font-weight: 600;
+    font-kerning: auto;
+}
+
+.img-tile > img {
+    border: 2px solid black;
+}
+
+.img-tile {
+    /* border: 2px solid black; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+form {
+    padding: 20px;
+}

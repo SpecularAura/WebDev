@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Hello html</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1 id="my-header">My First Web Dev Lab</h1>
+    <div>
+        Modules in the Syllabus:
+        <ol>
+            <li>Web Programming</li>
+            <li>Javascript</li>
+            <li>React Fundamentals</li>
+            <li>Node.js</li>
+            <li>Express</li>
+            <li>Advanced React</li>
+        </ol>
+    </div>
+    <section>
+        <h2>Images for related to each module:</h2>
+        <!-- <table>
+            <tr>
+                <td>Web Programming</td>
+                <td style="padding-left: 50%;">Javascript</td>
+            </tr>
+            <tr>
+                <td><img src="WebProgramming.jpg" alt="Web Programming"></td>
+                <td style="padding-left: 50%;"><img src="Javascript.png" alt="Javascript"></td>
+            </tr>
+            <tr>
+                <td>React Fundamentals</td>
+                <td style="padding-left: 50%;">Node.js</td>
+            </tr>
+            <tr>
+                <td><img src="ReactFundamentals.png" alt="Web Programming"></td>
+                <td style="padding-left: 50%;"><img src="NodeJS.png" alt="Javascript"></td>
+            </tr>
+            <tr>
+                <td>Express</td>
+                <td style="padding-left: 50%;">Advanced React</td>
+            </tr>
+            <tr>
+                <td><img src="Express.png" alt="Web Programming"></td>
+                <td style="padding-left: 50%;"><img src="AdvancedReact.jpg" alt="Javascript"></td>
+            </tr>
+        </table> -->
+
+        <div class="img-grid">
+            <div class="img-tile">
+                <span>Web Programming</span>
+                <img src="WebProgramming.jpg" alt="Web Programming">
+            </div>
+            <div class="img-tile">
+                <span>Javascript</span>
+                <img src="Javascript.png" alt="Javascript">
+            </div> 
+            <div class="img-tile">
+                <span>React Fundamentals</span>
+                <img src="ReactFundamentals.png" alt="Web Programming">
+            </div>
+            <div class="img-tile">
+                <span>Node.js</span>
+                <img src="NodeJS.png" alt="Javascript">
+            </div>
+            <div class="img-tile">
+                <span>Express</span>
+                <img src="Express.png" alt="Web Programming">
+            </div>
+            <div class="img-tile">
+                <span>Advanced React</span>
+                <img src="AdvancedReact.jpg" alt="Javascript">
+            </div>
+        </div>
+    </section>
+    <form action="mailto:2021.aum.kulkarni@ves.ac.in">
+        <fieldset>
+            <legend>Select the modules you are most excited about</legend>
+            <div>
+                <input type="checkbox" name="module1" id="module1">
+                <label for="module1">Web Programming</label>
+            </div>
+            <div>
+                <input type="checkbox" name="module2" id="module2">
+                <label for="module2">Javascipt</label>
+            </div>
+            <div>
+                <input type="checkbox" name="module3" id="module3">
+                <label for="module3">React Fundamentals</label>
+            </div>
+            <div>
+                <input type="checkbox" name="module4" id="module4">
+                <label for="module4">Node.js</label>
+            </div>
+            <div>
+                <input type="checkbox" name="module5" id="module5">
+                <label for="module5">Express</label>
+            </div>
+            <div>
+                <input type="checkbox" name="module6" id="module6">
+                <label for="module6">Advanced React</label>
+            </div>
+        </fieldset>
+        <button type="submit">Submit</button>
+    </form>
+    <script src="testing.js"></script>
+</body>
+
+</html>
