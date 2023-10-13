@@ -23,12 +23,11 @@ const handleLogin = async (req, res) => {
 };
 
 // Helper Functions
-const serializeSessionUser = (user) => {
-  return {
-    userId: user._id,
-    username: user.username,
-    profilePic: user.profilePic,
-  };
-};
+const serializeSessionUser = (user) => ({
+  userId: user._id,
+  username: user.username,
+  profilePic: user.profilePic,
+  roles: Object.values(user.roles).filter(Boolean),
+});
 
 module.exports = { handleLogin };

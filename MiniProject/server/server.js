@@ -35,13 +35,15 @@ app.use("/", require("./routes/root"));
 app.use("/register", require("./routes/register"));
 app.use("/auth", require("./routes/auth"));
 // app.use("/refresh", require("./routes/refresh"));
-// app.use("/logout", require("./routes/logout"));
+app.use("/logout", require("./routes/logout"));
+
+app.use("/authTest", require("./routes/authTest"));
 
 app.all("*", (req, res) => {
   res.status(404);
-  if (req.accepts("html")) {
+  if (req.accepts("json")) {
     res.sendFile(path.join(__dirname, "views", "404.html"));
-  } else if (req.accepts("json")) {
+  } else if (req.accepts("html")) {
     res.json({ error: "404 Not Found" });
   } else {
     res.type("txt").send("404 Not Found");
