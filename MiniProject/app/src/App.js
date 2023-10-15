@@ -8,6 +8,9 @@ import TryForm from "./components/TryForm";
 import TryLogin from "./components/TryLogin";
 import { Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
+import Logout from "./components/Logout";
+import ParentPortal from "./components/ParentPortal";
+import TeacherDashboard from "./components/TeacherDashboard";
 
 function App() {
   return (
@@ -16,7 +19,9 @@ function App() {
         {/* public routes */}
         <Route path="login" element={<TryLogin />} />
         <Route path="register" element={<TryForm />} />
-        <Route path="home" element={<Content />} />
+        <Route path="parent" element={<ParentPortal />} />
+        <Route path="teacher" element={<TeacherDashboard />} />
+        <Route path="logout" element={<Logout />} />
         {/* <Route path="unauthorized" element={<Unauthorized />} /> */}
       </Route>
     </Routes>

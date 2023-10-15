@@ -4,10 +4,12 @@ const morgan = require("morgan");
 const mongoose = require("mongoose");
 const session = require("express-session");
 const MongoStore = require("connect-mongo");
-
+const credentials = require("./config/credentials");
+const corsOptions = require("./config/corsOptions");
 const app = express();
 
-app.use(cors());
+app.use(credentials);
+app.use(cors(corsOptions));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(
@@ -38,6 +40,7 @@ app.use("/auth", require("./routes/auth"));
 app.use("/logout", require("./routes/logout"));
 
 app.use("/authTest", require("./routes/authTest"));
+app.use("/api", require("./routes/api/apiRoot"));
 
 app.all("*", (req, res) => {
   res.status(404);

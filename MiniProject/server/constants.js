@@ -1,13 +1,14 @@
 const ROLES_LIST = {
-  Role1: 1,
-  Role2: 2,
-  Role3: 3,
+  Teacher: 1,
+  Parent: 2,
+  // Student: 3,
 };
 
 const ROLE_GROUPS = {
-  Group1: [ROLES_LIST.Role1],
-  Group2: [ROLES_LIST.Role1, ROLES_LIST.Role2],
-  Group3: [ROLES_LIST.Role1, ROLES_LIST.Role2, ROLES_LIST.Role3],
+  TeacherGroup: [ROLES_LIST.Teacher],
+  // ParentGroup: [ROLES_LIST.Role2, ROLES_LIST.Role3],
+  // StudentGroup: [ROLES_LIST.Role1, ROLES_LIST.Role2, ROLES_LIST.Role3],
+  ParentGroup: [ROLES_LIST.Parent, ROLES_LIST.Teacher],
 };
 
 module.exports = {

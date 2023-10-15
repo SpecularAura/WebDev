@@ -11,12 +11,19 @@ export default function TryLogin() {
   const { auth, setAuth, name, setName } = useContext(AuthContext);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    if (auth?.username) {
+      navigateTo();
+    }
+  }, [auth]);
   async function handleSubmit(e) {
     e.preventDefault();
     try {
       setError("");
       setLoading(true);
       const response = await fetch("http://localhost:5000/auth", {
+        credentials: "include",
         method: "POST",
         headers: {
           Accept: "application/json",
@@ -35,9 +42,16 @@ export default function TryLogin() {
       console.log(e);
     }
     setLoading(false);
-    navigate("/home");
   }
 
+  const navigateTo = () => {
+    console.log(auth.roles);
+    if (auth.roles.find((el) => el === 1)) {
+      navigate("/teacher");
+    } else {
+      navigate("/parent");
+    }
+  };
   return (
     <>
       <Card>

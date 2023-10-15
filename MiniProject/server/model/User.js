@@ -17,12 +17,11 @@ const userSchema = new Schema(
       required: true,
     },
     roles: {
-      Role3: {
+      Parent: {
         type: Number,
-        default: 3,
+        default: 2,
       },
-      Role2: Number,
-      Role1: Number,
+      Teacher: Number,
     },
   },
   { timestamps: true }

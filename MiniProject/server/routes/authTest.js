@@ -9,29 +9,25 @@ router.get("/", auhtenticate, (req, res) => {
   });
 });
 
-router.get("/role1", authorize(ROLE_GROUPS.Group1), (req, res) => {
+router.get("/teacher", authorize(ROLE_GROUPS.TeacherGroup), (req, res) => {
   res.json({
-    msg: "You are authorized",
+    msg: "The teacher is authorized",
   });
 });
 
-router.get(
-  "/role2",
-  authorize([ROLES_LIST.Role1, ROLES_LIST.Role2]),
-  (req, res) => {
-    res.json({
-      msg: "You are authorized",
-    });
-  }
-);
+router.get("/parent", authorize(ROLE_GROUPS.ParentGroup), (req, res) => {
+  res.json({
+    msg: `The parent is authorized`,
+  });
+});
 
-router.get(
-  "/role3",
-  authorize([ROLES_LIST.Role1, ROLES_LIST.Role2, ROLES_LIST.Role3]),
-  (req, res) => {
-    res.json({
-      msg: "You are authorized",
-    });
-  }
-);
+// router.get(
+//   "/role3",
+//   authorize([ROLES_LIST.Role1, ROLES_LIST.Role2, ROLES_LIST.Role3]),
+//   (req, res) => {
+//     res.json({
+//       msg: "You are authorized",
+//     });
+//   }
+// );
 module.exports = router;
