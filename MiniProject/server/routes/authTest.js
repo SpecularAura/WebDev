@@ -29,6 +29,7 @@ router.get(
   "/role3",
   authorize([ROLES_LIST.Role1, ROLES_LIST.Role2, ROLES_LIST.Role3]),
   (req, res) => {
+    console.log(req.session.user.roles);
     res.json({
       msg: "You are authorized",
     });
