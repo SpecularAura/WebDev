@@ -4,3 +4,6 @@ DATABASE_URI="mongodb+srv://<usernmae>:<password>@cluster0.hajg9ff.mongodb.net/c
 SESSION_NAME="sid"
 SESSION_SECRET="USE A HASH VALUE HERE LATER"
 SESSION_LIFETIME="7200000"
+KEY_FILE=
+CERT_FILE=
+HTTPS_ENABLED="false"

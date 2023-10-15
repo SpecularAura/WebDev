@@ -25,8 +25,8 @@ app.use(
       touchAfter: 24 * 3600,
     }),
     cookie: {
-      sameSite: false,
-      secure: process.env.NODE_ENV === "production",
+      sameSite: "lax",
+      secure: process.env.HTTPS_ENABLED === "true",
       maxAge: parseInt(process.env.SESSION_LIFETIME),
     },
   })
